@@ -10,8 +10,12 @@ public class Pedido {
 	private String estado;
 	private int tiempoEstimadoEntrega;
 
+	public Pedido() {
+	}
+
 	public Pedido(String nombreProducto, String id, String descripcion, int cantidad, double total, String estado,
 			int tiempoEstimadoEntrega) {
+		
 		this.nombreProducto = nombreProducto;
 		this.id = id;
 		this.descripcion = descripcion;
@@ -21,11 +25,11 @@ public class Pedido {
 		this.tiempoEstimadoEntrega = tiempoEstimadoEntrega;
 	}
 
-	public String getNombre() {
+	public String getNombreProducto() {
 		return nombreProducto;
 	}
 
-	public void setNombre(String nombre) {
+	public void setNombreProducto(String nombre) {
 		this.nombreProducto = nombre;
 	}
 
