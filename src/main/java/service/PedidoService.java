@@ -16,7 +16,7 @@ public class PedidoService {
 
 	private PedidoRepository repository;
 
-	public Boolean crearPedido(Pedido pedido) {
+	public Pedido crearPedido(Pedido pedido) {
 		return repository.save(pedido);
 	}
 

@@ -12,14 +12,15 @@ public class PedidoRepository {
 
 	private final List<Pedido> baseDeDatos = new ArrayList<>();
 
-	public Boolean save(Pedido pedido) {
-		
-		return baseDeDatos.add(pedido);
+	public Pedido save(Pedido pedido) {
+		baseDeDatos.add(pedido);
+		return pedido;
 	}
 
 	public Pedido findById(String id) {
-		if (baseDeDatos.size()==0) return null;
-		
+		if (baseDeDatos.size() == 0)
+			return null;
+
 		for (Pedido pedido : baseDeDatos) {
 			if (pedido.getId().equals(id)) {
 				return pedido;
